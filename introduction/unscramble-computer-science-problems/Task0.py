@@ -22,5 +22,11 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 #Solution
-print("First record of texts, {} texts {} at time {}".format(texts[0][0], texts[0][1], texts[0][2]) )
-print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(calls[0][0], calls[0][1], calls[0][2], calls[0][3]) )
+first_text = texts[0]
+last_call = calls[-1]
+
+print("First record of texts, {} texts {} at time {}"
+      .format(first_text[0], first_text[1], first_text[2]))
+
+print("Last record of calls, {} calls {} at time {}, lasting {} seconds"
+      .format(last_call[0], last_call[1], last_call[2], last_call[3]))
