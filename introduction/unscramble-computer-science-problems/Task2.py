@@ -20,7 +20,7 @@ Print a message:
 "<telephone number> spent the longest time, <total time> seconds, on the phone during 
 September 2016.".
 """
-#receiving number (1)
+
 
 def longestDuration(calls):
     unique_num_with_duration = {}
