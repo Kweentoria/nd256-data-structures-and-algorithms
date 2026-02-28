@@ -23,5 +23,30 @@ Print a message:
 "These numbers could be telemarketers: "
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
-"""
 
+"""
+telemarketers = set()
+
+phonecaller = set()
+receiver_call = set()
+receiver_text = set()
+send_text = set()
+
+for call in calls:
+  caller = call[0]
+  receiver = call[1]
+  phonecaller.add(caller)
+  receiver_call.add(receiver)
+
+for text in texts:
+    texter = text[0]
+    receiver = text[1]
+    send_text.add(texter)
+    receiver_text.add(receiver)
+
+non_telemarketers = receiver_call | receiver_text | send_text
+for i in phonecaller:
+    if i not in non_telemarketers:
+        telemarketers.add(i)
+        
+print('These numbers could be telemarketers: {}'.format(sorted(telemarketers)))
