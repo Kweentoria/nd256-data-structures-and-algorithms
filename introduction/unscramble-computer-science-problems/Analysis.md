@@ -11,17 +11,17 @@
 
 ## Task1
 
-**Description**: The problem involves calculating the sum of all elements in an integer array.
+**Description**: The problem involves calculating the number of unique telephone numbers are there in the call and text records.
 
-**Approach**: Iterated through the array a single time, summing each element.
+**Approach**: Iterated through the array a single time, addding it it to an empty set.
 
 **Complexity Analysis**:
-- **Algorithm**: A single loop runs through each element of the array once.
-- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the array.
+- **Algorithm**: A single loop runs through each element of the array once, and this is done for call and text records separately.
+- **Big O Notation**: $O(n)$ and $O(m)$ where $n$ and $m$ are the number of elements in the call and text records respectively, resulting in $O(n + m)$.
 - **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
 
 ## Task2
-**Description**: The problem involves calculating the sum of all elements in an integer array.
+**Description**: The problem involves calculating the max total time spent on the phone.
 
 **Approach**: Iterated through the array a single time, summing each element.
 
