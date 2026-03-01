@@ -26,7 +26,7 @@
 **Approach**: Iterated through the calls array twice; once to build the duration dictionary, and once to find the maximum.
 
 **Complexity Analysis**:
-- **Algorithm**: A single loop runs through each element of the calls once. Then we re-run another loop to get the phone number and duration from our dictionary.
+- **Algorithm**: Two sequential loops, one through calls to build the duration dictionary and the other to find the phone number with max duration.
 - **Big O Notation**: $O(n)$ where $n$ is the number of elements in the calls record.
 - **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
 
@@ -34,6 +34,7 @@
 **Description**: The problem involves finding all of the area codes and mobile prefixes called by people in Bangalore, and percentage of calls from fixed lines in Bangalore that are made to fixed lines also in Bangalore
 
 **Approach A**: Iterated through the records a single time, using if/else to find the area codes and adding it to an empty set.
+
 **Approach B**: Iterated through the records a single time, counting the number of total calls made from bangalore and the total number of fixed lines calls from bangalore, then divide to get the percentage.
 
 **Complexity Analysis**:
