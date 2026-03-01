@@ -38,17 +38,17 @@
 **Approach B**: Iterated through the records a single time, counting the number of total calls made from bangalore and the total number of fixed lines calls from bangalore, then divide to get the percentage.
 
 **Complexity Analysis**:
-- **Algorithm**: A single loop runs through each element of the array once.
-- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the array.
+- **Algorithm**: A single loop runs through each element of the array once to get the unique codes. Then use sorted() to sort this unique codes
+- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the array. The sorted adds $O(k \log k)$, where k is the number of unique values in the set. Hence resulting in, $O(n \log n)$ worst case scenario.
 - **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
 
 ## Task4
 
 **Description**: The problem involves finding all telemarketers from the call and text records. Telemarketers only make calls and never receive calls, receive texts, or send texts.
 
-**Approach**: Iterated through calls and texts separately, building sets of callers, receivers, and texters. Computed the union of non-telemarketers and filtered out any phone caller that appeared in the union.
+**Approach**: Iterated through calls and texts separately, building sets of callers, receivers, and texters. Computed the union of non-telemarketers and filtered out any phone caller that appeared in the union. Telemarketers are sorted using the sorted () function.
 
 **Complexity Analysis**:
 - **Algorithm**: Three sequential loops run through calls, texts, and phonecallers respectively. A set union is computed once before the final loop.
-- **Big O Notation**: $O(n + m)$ where $n$ is the number of calls and $m$ is the number of texts.
-- **Justification**: Each element is accessed once across the loops, and set operations (add, union, lookup) are $O(1)$ on average; hence, the time complexity is directly proportional to the input sizes.
+- **Big O Notation**: $O(n + m)$ where $n$ is the number of calls and $m$ is the number of texts. The sorted adds $O(k \log k)$, where k is the number of unique telemarketers. Hence resulting in, $O((n+m)+ n l\og n)$ worst case scenario.
+- **Justification**: Each element is accessed once across the loops, and set operations (add, union, lookup) are $O(1)$ on average; hence, the time complexity is as written above.
