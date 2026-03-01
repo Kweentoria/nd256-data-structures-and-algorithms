@@ -1,19 +1,19 @@
 ## Task0
 
-**Description**: The problem involves printing the first record of calls and the last record of texts.
+**Description**: The problem involves printing the first record of texts and the last record of calls.
 
-**Approach**: Selected the first row in calls using index 0 and the last row in texts using index -1
+**Approach**: Selected the first row in texts using index 0 and the last row in calls using index -1
 
 **Complexity Analysis**:
 - **Algorithm**: No loop runs.
 - **Big O Notation**: $O(1)$ where $1$ is constant.
-- **Justification**: The complexity of the algoirthm is not determined by the value of the inputs, rather by the index of the element.
+- **Justification**: The complexity of the algorithm is not determined by the value of the inputs, rather by the index of the element.
 
 ## Task1
 
-**Description**: The problem involves calculating the number of unique telephone numbers are there in the call and text records.
+**Description**: The problem involves calculating the number of unique telephone numbers in the call and text records.
 
-**Approach**: Iterated through the array a single time, addding it it to an empty set.
+**Approach**: Iterated through both arrays, adding each number to an empty set. Counting the length of unique items in the set.
 
 **Complexity Analysis**:
 - **Algorithm**: A single loop runs through each element of the array once, and this is done for call and text records separately.
@@ -21,19 +21,20 @@
 - **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
 
 ## Task2
-**Description**: The problem involves calculating the max total time spent on the phone.
+**Description**: The problem involves calculating the max total time spent on the phone from one number.
 
-**Approach**: Iterated through the array a single time, summing each element.
+**Approach**: Iterated through the calls array twice; once to build the duration dictionary, and once to find the maximum.
 
 **Complexity Analysis**:
-- **Algorithm**: A single loop runs through each element of the array once.
-- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the array.
+- **Algorithm**: A single loop runs through each element of the calls once. Then we re-run another loop to get the phone number and duration from our dictionary.
+- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the calls record.
 - **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
 
 ## Task3
-**Description**: The problem involves calculating the sum of all elements in an integer array.
+**Description**: The problem involves finding all of the area codes and mobile prefixes called by people in Bangalore, and percentage of calls from fixed lines in Bangalore that are made to fixed lines also in Bangalore
 
-**Approach**: Iterated through the array a single time, summing each element.
+**Approach A**: Iterated through the records a single time, using if/else to find the area codes and adding it to an empty set.
+**Approach B**: Iterated through the records a single time, counting the number of total calls made from bangalore and the total number of fixed lines calls from bangalore, then divide to get the percentage.
 
 **Complexity Analysis**:
 - **Algorithm**: A single loop runs through each element of the array once.
@@ -42,11 +43,11 @@
 
 ## Task4
 
-**Description**: The problem involves calculating the sum of all elements in an integer array.
+**Description**: The problem involves finding all telemarketers from the call and text records. Telemarketers only make calls and never receive calls, receive texts, or send texts.
 
-**Approach**: Iterated through the array a single time, summing each element.
+**Approach**: Iterated through calls and texts separately, building sets of callers, receivers, and texters. Computed the union of non-telemarketers and filtered out any phone caller that appeared in the union.
 
 **Complexity Analysis**:
-- **Algorithm**: A single loop runs through each element of the array once.
-- **Big O Notation**: $O(n)$ where $n$ is the number of elements in the array.
-- **Justification**: Each element is accessed once; hence, the time complexity is directly proportional to the array size.
+- **Algorithm**: Three sequential loops run through calls, texts, and phonecallers respectively. A set union is computed once before the final loop.
+- **Big O Notation**: $O(n + m)$ where $n$ is the number of calls and $m$ is the number of texts.
+- **Justification**: Each element is accessed once across the loops, and set operations (add, union, lookup) are $O(1)$ on average; hence, the time complexity is directly proportional to the input sizes.
