@@ -57,8 +57,9 @@ for call in calls:
      list_of_codes.add(receiver[:4])
   elif caller[:5] == '(080)' and receiver[:3] == '140':
      list_of_codes.add(receiver[:3])
-print('The numbers called by people in Bangalore have codes: {}'.format(sorted(list_of_codes)))   
-
+# print('The numbers called by people in Bangalore have codes: {}'.format(sorted(list_of_codes)))   
+print('The numbers called by people in Bangalore have codes:')
+print('\n'.join(sorted(list_of_codes)))
 #Part B
 total_ban_callers_receivers = 0
 total_ban_callers = 0

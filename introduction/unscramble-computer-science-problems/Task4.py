@@ -49,4 +49,5 @@ for i in phonecaller:
     if i not in non_telemarketers:
         telemarketers.add(i)
         
-print('These numbers could be telemarketers: {}'.format(sorted(telemarketers)))
+print('These numbers could be telemarketers:')
+print('\n'.join(sorted(telemarketers)))
