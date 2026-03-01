@@ -50,5 +50,5 @@
 
 **Complexity Analysis**:
 - **Algorithm**: Three sequential loops run through calls, texts, and phonecallers respectively. A set union is computed once before the final loop.
-- **Big O Notation**: $O(n + m)$ where $n$ is the number of calls and $m$ is the number of texts. The sorted adds $O(k \log k)$, where k is the number of unique telemarketers. Hence resulting in, $O((n+m)+ n l\og n)$ worst case scenario.
+- **Big O Notation**: $O(n + m)$ where $n$ is the number of calls and $m$ is the number of texts. The sorted adds $O(k \log k)$, where k is the number of unique telemarketers. Hence resulting in, $O((n+m)+ n \log n)$ worst case scenario.
 - **Justification**: Each element is accessed once across the loops, and set operations (add, union, lookup) are $O(1)$ on average; hence, the time complexity is as written above.
